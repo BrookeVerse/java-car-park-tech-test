@@ -1,8 +1,9 @@
 package org.example.vehicles;
 
 
+import org.example.ParkingLot;
 import org.example.VehicleType;
-import org.example.parking.CarSpace;
+import org.example.parking.VanSpace;
 
 import static org.example.VehicleType.van;
 
@@ -14,7 +15,12 @@ public class Van extends Vehicle{
         VehicleType size = van;
     }
     @Override
-    public boolean fitInSpace(CarSpace space) {
+    public boolean fitInSpace(VanSpace space) {
         return space.getSize == van;
+    }
+
+    @Override
+    public boolean fitInSpace(ParkingLot space) {
+        return space.getSize == van;;
     }
 }

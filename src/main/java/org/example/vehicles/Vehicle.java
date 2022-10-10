@@ -1,30 +1,22 @@
 package org.example.vehicles;
 import org.example.ParkingLot;
 import org.example.VehicleType;
-import org.example.parking.CarSpace;
 
-
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class Vehicle {
-
-    private VehicleType type;
     private int spaceNeeded;
+    private VehicleType size;
+    private ArrayList<ParkingSpace> parkingSpaces = new ArrayList<ParkingSpace>();
 
-    private ArrayList<ParkingLot> parkingSpaces = new ArrayList<ParkingLot>();
-
-
-    public VehicleType getType() {
-        return type;
+    public VehicleType getSize() {
+        return size;
     }
 
     public int getSpaceNeeded() {
         return spaceNeeded;
     }
 
-    public void parkInSpace(CarSpace space) {
-        parkingSpaces.add(space);
-    }
-
-    public abstract boolean fitInSpace(CarSpace space);
+    public abstract boolean fitInSpace(ParkingSpace space);
 }

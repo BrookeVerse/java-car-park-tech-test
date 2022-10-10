@@ -5,13 +5,12 @@ import org.example.VehicleType;
 import org.example.vehicles.Vehicle;
 
 //This is the medium spot that can take in cars and motocycles
-public class CarSpace  extends ParkingLot {
+public class CarSpace {
     private Vehicle type;
     private VehicleType size;
     private int parkingSpace;
 
-    public CarSpace(Vehicle type, VehicleType size, int parkingSpace) {
-        this.type = type;
+    public CarSpace(VehicleType size, int parkingSpace) {
         this.size = size;
         this.parkingSpace = parkingSpace;
     }

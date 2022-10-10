@@ -1,16 +1,17 @@
 package org.example.parking;
 
+import org.example.ParkingLot;
 import org.example.VehicleType;
 import org.example.vehicles.Vehicle;
 
 //This is the smallest space and can only take in Motocycles
-public class MotorbikeSpace {
+public class MotorbikeSpace extends ParkingLot {
     private Vehicle type;
     private VehicleType size;
     private int parkingSpace;
 
-    public MotorbikeSpace(Vehicle type, VehicleType size, int parkingSpace) {
-        this.type = type;
+    public MotorbikeSpace(VehicleType size, int parkingSpace) {
+        super(5);
         this.size = size;
         this.parkingSpace = parkingSpace;
     }
