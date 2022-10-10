@@ -1,6 +1,7 @@
 package org.example.vehicles;
 import org.example.ParkingLot;
 import org.example.VehicleType;
+import org.example.parking.CarSpace;
 
 
 import java.util.ArrayList;
@@ -21,9 +22,9 @@ public abstract class Vehicle {
         return spaceNeeded;
     }
 
-    public void parkInSpace(ParkingLot space) {
+    public void parkInSpace(CarSpace space) {
         parkingSpaces.add(space);
     }
 
-    public abstract boolean fitInSpace(ParkingLot space);
+    public abstract boolean fitInSpace(CarSpace space);
 }

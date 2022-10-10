@@ -1,8 +1,9 @@
 package org.example.vehicles;
 
 
-import org.example.ParkingLot;
 import org.example.VehicleType;
+import org.example.parking.CarSpace;
+
 import static org.example.VehicleType.car;
 
 //Each vehicle takes up a certain amount of space. I need to set and get how much space it takes
@@ -13,7 +14,7 @@ public class Car extends Vehicle{
     VehicleType size = car;
     }
     @Override
-    public boolean fitInSpace(ParkingLot space) {
-        return true;
+    public boolean fitInSpace(CarSpace space) {
+        return space.getType() == car;
     }
 }
