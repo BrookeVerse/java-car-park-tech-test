@@ -1,16 +1,16 @@
 package org.example.parking;
 
 import org.example.ParkingLot;
-import org.example.VehicleType;
+import org.example.vehicles.Van;
 import org.example.vehicles.Vehicle;
 
 //This is the largest spot, it takes up three car spaces but can hold all three vehicles
 public class VanSpace extends ParkingLot {
     private Vehicle type;
-    private VehicleType size;
+    private Van.VehicleType size;
     private int parkingSpace;
 
-    public VanSpace(VehicleType size, int parkingSpace) {
+    public VanSpace(Van.VehicleType size, int parkingSpace) {
         super(10);
         this.size = size;
         this.parkingSpace = parkingSpace;
@@ -20,7 +20,7 @@ public class VanSpace extends ParkingLot {
         return parkingSpace;
     }
 
-    public VehicleType getType() {
+    public Van.VehicleType getType() {
         return size;
     }
 

@@ -1,8 +1,6 @@
 package org.example.vehicles;
-import org.example.ParkingLot;
-import org.example.VehicleType;
+import org.example.parking.ParkingSpace;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class Vehicle {

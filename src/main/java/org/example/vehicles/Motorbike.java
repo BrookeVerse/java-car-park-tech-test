@@ -1,23 +1,23 @@
 package org.example.vehicles;
 
-import org.example.VehicleType;
-import org.example.parking.VanSpace;
+import org.example.parking.ParkingSpace;
 
-import static org.example.VehicleType.motorbike;
-import static org.example.VehicleType.van;
+import static org.example.vehicles.VehicleType.*;
 
 //Each vehicle takes up a certain amount of space. I need to set and get how much space it takes
 //Motorcycle takes up one motorcycle/car/van space.
-public class Motorbike {
+public class Motorbike extends Vehicle{
     int spaceNeeded;
-
-    public Motorbike(int spaceNeeded) {
-        this.spaceNeeded = spaceNeeded;
+    public Motorbike() {
+        spaceNeeded = 1;
     }
 
-//    public boolean fitInSpace(VanSpace space) {
-//        return space.getType() == VehicleType.car || space.getType() == motorbike || space.getType() == van;
-//    }
+    @Override
+    public boolean fitInSpace(ParkingSpace space) {
+        return space.getSize() == van ||space.getSize() == car || space.getSize() == van;
+    }
 
+    public static class VehicleFactory {
 
+    }
 }
